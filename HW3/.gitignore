@@ -1,0 +1,3 @@
+# ignore the secret file containing keys
+server/aws_secret.yaml
+server/test_list/cred.py

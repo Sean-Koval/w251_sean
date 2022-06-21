@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serv-logger
+spec:
+  selector:
+    matchLabels:
+      app: mosquitto
+  replicas: 0 # tells deployment to run 1 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: mosquitto
+    spec:
+      containers:
+      - name: serv-logger
+        image: seankoval/serv_logger:v1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logger-list
+spec:
+  selector:
+    matchLabels:
+      app: mosquitto
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: mosquitto
+    spec:
+      containers:
+      - name: logger-list
+        image: seankoval/logger_list:v1
+

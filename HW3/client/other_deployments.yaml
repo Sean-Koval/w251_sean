@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployments
+spec:
+  selector:
+    matchLabels:
+      app: mosquitto
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: mosquitto
+    spec:
+      containers:
+      - name: forwarder
+        image: seankoval/forwarder:v1
+      - name: logger
+        image: seankoval/logger:v1
+      - name: detector
+        image: seankoval/detector:v1
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /dev/video7
+          name: dev-video7
+      volumes:
+      - name: dev-video7
+        hostPath:
+          path: /dev/video7

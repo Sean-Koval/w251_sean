@@ -51,7 +51,7 @@ Initial setup (node)):
 - Note: you will have to set the IP Address used by the forwarder to the IPv4 address of the AWS instance
 - Note: you may have to edit the video port that the jetson nano/VM is assigning to the camera
 
-
+```
 +-- cloud
 |   +-- deploy_script.sh
 |   +-- broker
@@ -99,7 +99,7 @@ Initial setup (node)):
 |   +-- deploy.sh
 |   +-- other_deployments.yaml
 |   +-- stop_deployment.sh
-
+```
 
 Code:
 - Camera capture python file

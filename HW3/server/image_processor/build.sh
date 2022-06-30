@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker build -t processor --no-cache .
-docker tag processor seankoval/processor:v3
-docker push seankoval/processor:v3
+docker build -t logger-list .
+docker tag logger-list seankoval/logger_list:v1
+docker push seankoval/logger_list:v1

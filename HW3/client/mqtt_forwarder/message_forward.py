@@ -21,9 +21,6 @@ def on_connect_local(client, userdata, flags, rc):
 def on_connect_remote(client, userdata, msg):
     print(f'Connected to remote broker with rc: {str(rc)}')
 
-#def on_publish(client,userdata,result): #create function for callback
-#    print("data published \n")
-#    pass
 
 def on_message(client, userdata, msg):
     try:
@@ -31,8 +28,7 @@ def on_message(client, userdata, msg):
         #print(f'message received: {len(msg)}') 
 
         msg = msg.payload  
-        #test_message = "ARE YOU GETTING THIS"
-        #remote_mqttclient.publish(REMOTE_MQTT_TOPIC, payload=test_message, qos=1)
+
         # forward Message
         remote_mqttclient.publish(REMOTE_MQTT_TOPIC, payload=msg, qos=0)
         print(f'message sent {len(msg)}')

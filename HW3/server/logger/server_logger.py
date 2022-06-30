@@ -38,8 +38,6 @@ local_mqttclient.connect(LOCAL_MQTT_HOST, port=LOCAL_MQTT_PORT, keepalive=60)
 print('4/4:\tListening to Broker...')
 local_mqttclient.on_message = on_message
 
-
-
 # go into a loop
 local_mqttclient.loop_forever()
 

@@ -10,7 +10,6 @@ RUN pip3 install paho-mqtt
 RUN export NO_AT_BRIDGE=0
 #RUN xhost +
 #RUN export DISPLAY=$DISPLAY
-#RUN xhost +
 
 WORKDIR /app
 COPY haarcascade_frontalface_default.xml ./

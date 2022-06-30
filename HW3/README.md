@@ -4,7 +4,10 @@ This a repository for setting up the face capture application that will run on a
 
 LINK TO PUBLIC S3 BUCKET:
 
-https://s3.console.aws.amazon.com/s3/buckets/seanimagebucket?region=us-east-1&tab=objects
+
+![](https://seanimagebucket.s3.amazonaws.com/06-19-2022-18-59-32sean_koval_image.png)
+
+[https://seanimagebucket.s3.amazonaws.com/06-19-2022-18-59-32sean_koval_image.png](https://seanimagebucket.s3.amazonaws.com/06-19-2022-18-59-32sean_koval_image.png)
 
 ## Setting up Kubernetes, Docker, and OpenCV on an edge device (linux VM)
 

@@ -23,3 +23,12 @@ Tips:
 * Please monitor the GPU utilization using nvidia-smi; as long as both GPUs are > 95% utilized, you are doing fine.
 
 
+https://wandb.ai/quickstart/pytorch
+
+### Steps:
+
+1) Create and spin up the two instances within VPC
+2) Clone repos onto Hive and Drone instances (g4)
+3) Sign up/create account for tensoboard/wandb.ai
+4) Run the notebooks in Hive and Drone instances (Hive first)
+5) Try running single node instnace file (compare the two and submit output)

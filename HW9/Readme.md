@@ -32,3 +32,23 @@ https://wandb.ai/quickstart/pytorch
 3) Sign up/create account for tensoboard/wandb.ai
 4) Run the notebooks in Hive and Drone instances (Hive first)
 5) Try running single node instnace file (compare the two and submit output)
+
+
+THIS WORKED:
+```
+docker run --gpus all --shm-size=2048m -it --rm --net=host -v ./data:/data -v ./w251_sean/HW9/:/workspace/w251 nvcr.io/nvidia/pytorch:21.08-py3
+```
+```
+docker run --gpus all --shm-size=2048m -it --rm -v ~/data:/data nvcr.io/nvidia/pytorch:21.08-py3
+```
+
+Run this command from inside the /data folder of the g4dxn.2xlarge instance
+```
+Run the above docker command. Have to cd .. back to /data or cd /data to find the train and val datasets within the docker image. 
+
+thank you Gerrit and all for sharing this.   I was stuck for a moment because I couldn’t find the /data folder once I am in the docker container.   However, you need to cd .. back to root to see the /data  because the command above is set to root/data, but when you enter your docker container (at least for me) the landing directory is /root/workspace
+```
+
+```
+docker run --gpus all -it --rm -v /data:./data -p 8888:8888 nvcr.io/nvidia/pytorch:21.08-py3
+```

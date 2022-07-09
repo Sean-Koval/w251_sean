@@ -1,0 +1,18 @@
+{
+    "os": "Linux-5.11.0-1028-aws-x86_64-with-glibc2.10",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-07-09T15:04:04.897924",
+    "startedAt": "2022-07-09T15:04:03.921226",
+    "docker": null,
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "hive.ipynb",
+    "root": "/workspace/w251",
+    "host": "ip-172-31-26-243",
+    "username": "root",
+    "executable": "/opt/conda/bin/python3.8"
+}

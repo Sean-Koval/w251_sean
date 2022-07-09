@@ -1,0 +1,38 @@
+wandb_version: 1
+
+WEIGHT_DECAY:
+  desc: null
+  value: 0.0001
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.21
+    framework: torch
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.8.10
+    start_time: 1657257467
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      3:
+      - 16
+      4: 3.8.10
+      5: 0.12.21
+      8:
+      - 1
+      - 5
+arch:
+  desc: null
+  value: resnet18
+batch_size:
+  desc: null
+  value: 500
+epochs:
+  desc: null
+  value: 2
+momentum:
+  desc: null
+  value: 0.9

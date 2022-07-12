@@ -1,0 +1,8 @@
+## Steps to setup the training job in the cloud 
+
+1: Setup account in NVIDEA (get the AMI api key)
+2: go to aws EC2 and setup a large instance and add a tag with the name 
+3: setup current key permissions
+4: SSH into the instance and download docker and required tools 
+5: download the data set and begin directory setup 
+6: begin training the model 

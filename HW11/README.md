@@ -35,6 +35,7 @@ time docker run -it --rm --net=host --gpus all --shm-size=2048m -e DISPLAY=$DISP
 
 
 ## 2. What values did you try?
+```
 values tried (Iter1, Iter2, Iter3): 
 layer_1: 32, 256, 512
 layer_2: 16, 128, 256
@@ -42,7 +43,7 @@ batch_size: 32, 64, 64
 
 epsilon_decay: .995, .999, .995
 gamma: .99, .95, .99
-
+```
 ## 3. Did you try any other changes that made things better or worse?
 Most of my changes were in these values above. I noticed that when I decreased the gamme adn increased the epsilon_decay there was a decrease in model performance. The model took significantly longer to train and have the rewards above 200 when I was using first two models. The Iter1 model performed very poorly and was not able to get the model to land after 750 runs. 
 
@@ -51,9 +52,9 @@ Most of my changes were in these values above. I noticed that when I decreased t
 
 ![gif](images/episode_50_hw1.gif)
 
-
 Result:
 
+```
 99      : Episode || Reward:  73.331
 Average Reward:  -17.7334
 Total tests above 200:  6
@@ -61,15 +62,15 @@ Total tests above 200:  6
 real    38m14.231s
 user    0m1.349s
 sys     0m2.477s
-
+```
 
 ### Attempt2:
 
 ![gif](images/episode_750_hw2.gif)
 
-Changes:
+Result:
 
-
+```
 Result:
 99      : Episode || Reward:  280.9333857208883
 Average Reward:  252.38470130078443
@@ -78,13 +79,14 @@ Total tests above 200:  98
 real    21m14.231s
 user    0m1.349s
 sys     0m2.477s
-
+```
 
 
 ### Attempt3:
 
 ![gif](images/episode_450_hw3.gif)
 
+```
 99      : Episode || Reward:  186.36790646279343
 Average Reward:  203.04847813525652
 Total tests above 200:  54
@@ -92,7 +94,7 @@ Total tests above 200:  54
 real    41m6.251s
 user    0m2.564s
 sys     0m4.035s
-
+```
 
 ## 4. Did they improve or degrade the model? Did you have a test run with 100% of the scores above 200?
 
